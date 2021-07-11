@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+.navBar{
+    display:flex;
+    align-items: center;
+    margin:0px 0px 30px;
+    height:10%;
+    justify-content : space-between;
+    background-color:antiquewhite;
+    .bandIconContainer>h1{
+        font-family: 'Fredoka One', cursive;
+        color:green;
+    }
+    .location{
+        height:1.5em;
+        width:fit-content;
+        padding:3px;
+        display: flex;
+        align-items: center;
+        box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.4);
+        -webkit-box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.4);
+        -moz-box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.4);
+        border-radius: 0.6em;
+        >p{
+            flex:1;
+        }
+        >select{
+            outline:none;
+            border:none;
+        }
+    }
+    .searchBar{
+        display: flex;
+        align-items: center;
+        width:300px;
+        justify-content: center;
+        border-radius: 20px;
+        padding:5px;
+        background-color: white;
+        box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.4);
+        -webkit-box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.4);
+        -moz-box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.4);
+        .uploadButton{
+            height:2em;
+            width:2em;
+            border-radius: 50%;        
+            display: grid;
+            place-items: center;
+        }
+        .inputBar{
+            height: 2em;
+            width:10em;
+            border:none;
+            outline:none;
+            
+        }
+    }
+}
+

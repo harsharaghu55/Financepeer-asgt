@@ -1,0 +1,44 @@
+.registerPageBackground{
+    position:absolute;
+    background-size:cover;
+    height:100vh;
+    width:100vw;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    .inputFieldsContainer{
+        position:relative;
+        height:30rem;
+        width:30rem;
+        box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
+        background-color: rgba(255, 255, 255, .15);
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        flex-direction:column;
+        .labelStyle{
+            color:#161616;
+            font-weight:700;
+            font-size:20px;
+            
+        }
+        .userNameInputregisterPage{
+            border:none;
+            border-radius:4px;
+            box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
+            background-color: rgba(255, 255, 255, .3);
+            height:30px;
+            width:200px;
+            margin:10px;
+        }
+        .registerButton{
+            background-color:#346751;
+            height:30px;
+            width:100px;
+            border-radius:4px;
+            color:#161616;
+            font-weight:700;
+            margin:20px;
+        }
+    }
+}
