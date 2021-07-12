@@ -19,7 +19,7 @@ function RegistrationPage (){
     }
     console.log(state)
     function submmitButtonClickHandler(){
-        fetch('http://localhost:3200/router/user-register',{
+        fetch('http://localhost:3200/register/user-register',{
             headers:{
                 "Content-type":"application/json"
             },

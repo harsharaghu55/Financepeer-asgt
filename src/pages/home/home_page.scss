@@ -1,0 +1,71 @@
+.dataContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: cetnter;
+    align-items: center;
+    .card{
+        margin-left:20px;
+        width:80%;
+        height:200px;
+        box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.52);
+        -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.52);
+        -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.52);
+        border-radius: 20px;
+        margin-bottom:30px;
+        display:flex;
+        flex-direction: column;
+        justify-content:space-between;
+        padding:10px;
+        .userId{
+            display:flex;
+            align-items: center;
+            margin:0px;
+            >h4{
+                margin:0px;
+                width:70px;  
+            }
+            >div{
+                padding:5px;
+                display:grid;
+                place-content: center;
+            }
+            >p{
+                margin:0px;
+            }
+        }
+        .title{
+            display:flex;
+            align-items: center;
+            margin:0px;
+            >h4{
+                margin:0px;
+                width:70px;
+            }
+            >div{
+                padding:5px;
+                display:grid;
+                place-content: center;
+            }
+            >p{
+                margin:0px;
+            }
+        }
+        .body{
+            display:flex;
+            align-items: flex-start;
+            margin:0px;
+            >h4{
+                margin:0px;
+                width:70px;
+            }
+            >div{
+                padding:5px;
+                display:grid;
+                place-content: center;
+            }
+            >p{
+                margin:0px;
+            }
+        }
+    }
+}

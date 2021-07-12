@@ -1,12 +1,9 @@
 require('dotenv').config()
 const express = require('express')
-const router = express.Router();
-const jwt = require('jsonwebtoken')
+const registerModule = express.Router();
 const mongoose = require('mongoose')
-const User = require('./model/user')
+const User = require('../model/user')
 const bcrypt = require('bcryptjs')
-const bodyParser = require('body-parser')
-
 
 mongoose.connect(
     "mongodb://localhost:27017/Financepeer-asgt",
@@ -22,20 +19,10 @@ connection.once("open",()=>{
     console.log("mongodb connection established")
 })
 
-const authService2 = ({ userName, password })=>{
-    const preHash = `${userName}@${password}`
-    const hashedValue = hashFunction(preHash)
-    const currentTime = Date.now();
-    const expiryTime = currentTime + 15 * 60 * 1000;
-    const authToken = uuidv4()
-    userTable[hashedValue] = [authToken,expiryTime]
-    return {authToken, id: hashedValue, authorised: true}
-}
-
-router.use(express.json())
+registerModule.use(express.json())
 
 
-router.post("/user-register",async (req,res)=>{
+registerModule.post("/user-register",async (req,res)=>{
     const {fullName,email,password,...metadata} = await req.body
     
     if(!email || typeof email !== 'string' ){
@@ -74,13 +61,8 @@ router.post("/user-register",async (req,res)=>{
         }
         throw error
     }
-    res.json({ status:'ok' })
-    // const {authToken,authorised} = authService2({ userName,password })
-    // if(authorised){
-    //     res.status(200).json({verified:true,authToken})
-    // }else{
-    //     res.status(400).jason({verified:false})
-    // }  
+
+    res.json({ status:'ok' })  
 })
 
-module.exports = router;
+exports.registerModule = registerModule

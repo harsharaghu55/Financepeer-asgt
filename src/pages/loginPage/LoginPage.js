@@ -21,7 +21,7 @@ function LogInPage ({setUser, setAuthToken}){
     }
     
     function authenticateUser(){
-        fetch("http://localhost:3200/secure-login",{
+        fetch("http://localhost:3200/login/secure-login",{
                     headers:{
                         "Content-type":"application/json"
                     },

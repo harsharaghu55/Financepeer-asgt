@@ -3,19 +3,19 @@ import './NavBar.scss'
 import { AiOutlineLogout } from 'react-icons/ai'
 import { FaCloudUploadAlt } from 'react-icons/fa'
 
-function NavBar() {
+function NavBar({ authToken,setUserData }) {
     const [data,setData] = useState('')
 
     function uploadClickHandler (){
         const formData = new FormData();
         formData.append('file', data.selectedFile);
-        fetch("http://localhost:3200/upload",{
+        fetch("http://localhost:3200/fileUploder/upload",{
             headers:{
-            
+                authorization:`Barer ${authToken}`
             },
             method:"post",
             body:formData
-        }).then(res=>res.json()).then(res=>console.log(res))
+        }).then(res=>res.json()).then(res=>setUserData(res.userData))
     }
     return (
         <div className="navBar">
@@ -41,8 +41,8 @@ function NavBar() {
                 </div>
             </div>
             <div className="navLinks">
-                <button className="button">
-                    <AiOutlineLogout />
+                <button className="logoutButton">
+                    <AiOutlineLogout fillColor="red" />
                     <p>LogOut</p>
                 </button>
             </div>
